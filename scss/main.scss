@@ -30,11 +30,18 @@
 
 .inputLabel {
 	margin-right: 5pt;
-	flex-grow: 1;
-	
+	text-align: left;
+	width: 50pt;
+
+	@include lg {
+		text-align: right;
+		width: 50pt;
+	}
 }
 
 .loginButton {
+	width: 100%;
+	white-space: nowrap;
 	background-color: #44c767;
 	border-radius: 28px;
 	border: 1px solid #18ab29;
@@ -56,6 +63,8 @@
 }
 
 .forgotButton {
+	width: 100%;
+	white-space: nowrap;
 	background-color: #7892c2;
 	border-radius: 28px;
 	border: 1px solid #4e6096;
@@ -84,25 +93,23 @@
 		padding-left: 20pt;
 		padding-right: 20pt;
 	}
-
-	@include md {
-		padding-left: 100pt;
-		padding-right: 100pt;
-	}
 }
 
 .customInput {
-	max-width: 500pt;
-	width: 100%;
+	width: 200pt;
 	margin-right: 5pt;
+	border: 1px solid black;
 }
 
 .inputRow {
 	display: flex;
-	margin: 10pt;
+	padding: 10pt;
+	margin: auto;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	
+	align-self: center;
+  justify-self: center;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	@include sm {
@@ -118,50 +125,58 @@
 	}
 
 	@include lg {
-		flex-direction: column;
+		flex-direction: row;
 		align-items: flex-start;
+		grid-column-start: 1;
+		grid-column-end: 4;
 	}
 
 	@include xl {
 		flex-direction: row;
 		align-items: center;
+		grid-column-start: 1;
+		grid-column-end: 4;
 	}
 }
 
 .buttonRow {
 	display: flex;
-	margin: 10pt;
+	padding: 10pt;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	grid-column-start: 1;
 	grid-column-end: 4;
-	grid-row: 3;
+	grid-row: 4;
 	@include sm {
-		flex-direction: column;
+		flex-direction: row;
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row: 3;
+		grid-row: 4;
 	}
+	
 	@include md {
 		flex-direction: column;
+		justify-self: left;
 		grid-column-start: 3;
 		grid-column-end: 4;
 		grid-row-start: 1;
-		grid-row-end: 3;
+		grid-row-end: 4;
 	}
 
 	@include lg {
 		flex-direction: column;
+		justify-self: center;
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row: 3;
+		grid-row: 4;
 	}
 
 	@include xl {
 		flex-direction: row;
+		justify-self: center;
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row: 3;
+		grid-row: 4;
 	}
 }
