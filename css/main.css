@@ -1,11 +1,19 @@
 .inputLabel {
   margin-right: 5pt;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  text-align: left;
+  width: 50pt;
+}
+
+@media (min-width: 992px) {
+  .inputLabel {
+    text-align: right;
+    width: 50pt;
+  }
 }
 
 .loginButton {
+  width: 100%;
+  white-space: nowrap;
   background-color: #44c767;
   border-radius: 28px;
   border: 1px solid #18ab29;
@@ -29,6 +37,8 @@
 }
 
 .forgotButton {
+  width: 100%;
+  white-space: nowrap;
   background-color: #7892c2;
   border-radius: 28px;
   border: 1px solid #4e6096;
@@ -66,24 +76,18 @@
   }
 }
 
-@media (min-width: 768px) {
-  .container {
-    padding-left: 100pt;
-    padding-right: 100pt;
-  }
-}
-
 .customInput {
-  max-width: 500pt;
-  width: 100%;
+  width: 200pt;
   margin-right: 5pt;
+  border: 1px solid black;
 }
 
 .inputRow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10pt;
+  padding: 10pt;
+  margin: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -91,9 +95,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
@@ -128,13 +132,16 @@
 
 @media (min-width: 992px) {
   .inputRow {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
   }
 }
 
@@ -147,6 +154,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
   }
 }
 
@@ -154,7 +164,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10pt;
+  padding: 10pt;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -168,21 +178,21 @@
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
-  -ms-grid-row: 3;
-  grid-row: 3;
+  -ms-grid-row: 4;
+  grid-row: 4;
 }
 
 @media (min-width: 576px) {
   .buttonRow {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 4;
-    -ms-grid-row: 3;
-    grid-row: 3;
+    -ms-grid-row: 4;
+    grid-row: 4;
   }
 }
 
@@ -192,12 +202,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-grid-column-align: left;
+        justify-self: left;
     -ms-grid-column: 3;
         grid-column-start: 3;
     grid-column-end: 4;
     -ms-grid-row: 1;
         grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 4;
   }
 }
 
@@ -207,11 +219,13 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-grid-column-align: center;
+        justify-self: center;
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 4;
-    -ms-grid-row: 3;
-    grid-row: 3;
+    -ms-grid-row: 4;
+    grid-row: 4;
   }
 }
 
@@ -221,11 +235,13 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-grid-column-align: center;
+        justify-self: center;
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 4;
-    -ms-grid-row: 3;
-    grid-row: 3;
+    -ms-grid-row: 4;
+    grid-row: 4;
   }
 }
 /*# sourceMappingURL=main.css.map */
